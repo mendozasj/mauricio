@@ -1,0 +1,21 @@
+<?php
+
+// config.php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'bd_sistema');
+
+$cnn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$cnn) {
+	die('Error de conexión: ' . mysqli_connect_error());
+}
+
+// Versión corregida con utf8mb4 y manejo de errores
+if (!mysqli_set_charset($cnn, 'utf8mb4')) {
+	die('Error al establecer charset utf8mb4: ' . mysqli_error($cnn));
+}
+
+
+?>
