@@ -18,4 +18,9 @@ function miSelect($lcTabla, $lcNombreCampoId, $lnValorDefecto)
     return $lcCadena;
 }
 
+function holaMundo()
+{
+    return 'Hola Mundo';
+}
+
 //
